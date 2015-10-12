@@ -1,0 +1,46 @@
+<template name="Nav">
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+
+      <div class="navbar-header">
+        {{#if currentUser}}
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_lucky_draw" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        {{/if}}
+        <a class="navbar-brand" href="{{#if currentUser}}{{pathFor route='App'}}{{/if}}">
+          <img alt="Brand" class="imgLogoSize" src="/images/logo.png">
+        </a>
+      </div>
+
+      {{#if currentUser}}
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse float-right" id="nav_lucky_draw">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+
+            <a href="#" class="dropdown-toggle float-right" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-user"></i>
+              {{userInfo.name}}<span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a href="{{pathFor route='personnel.editor'}}" class="float-right cursor" xeditor="personnel">Edit Profile</a></li>
+              <li><a href="{{pathFor route='luck.draw'}}" class="float-right" xaction="luckDraw">LuckyDraw</a></li>
+              <li><a href="#" class="float-right" xaction="logout">Logout</a></li>
+            </ul>
+
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+
+      {{/if}}
+    </div><!-- /.container-fluid -->
+  </nav>
+
+</template>

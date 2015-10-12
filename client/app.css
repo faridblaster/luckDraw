@@ -1,0 +1,91 @@
+@import "css/login.css";
+
+.imgLogoSize{
+    width:35px;
+}
+
+@media (max-width: 480px) {
+    .m-t-xs {
+        margin-top: 5px;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .login_area{
+        width: 500px;
+    }
+}
+
+.no-border{
+    border:0px;
+}
+
+.float-right{
+    float: right;
+}
+
+.m-r-5{
+    margin-bottom: 5px;
+}
+.m-r-10{
+    margin-bottom: 10px;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.fix-height{
+
+    height:200px;
+    width:200px;
+
+}
+
+.m-t-100{
+    margin-top: 100px;
+}
+
+.font-size-150px{
+
+    font-size: 150px;
+}
+
+.clear-left {
+    clear: left;
+}
+
+.clear-right {
+    clear: right;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.btn-luck-draw{
+    padding: 25px;
+    margin-top: -9px;
+}
+
+.navbar-default {
+    border-bottom: 2px solid black;
+}
+.sweet-alert p{
+    color:black;
+}
+
+body {
+    background:#0D343A;
+    background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ), to(#000000)  );
+    background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(0,0,0,1) 100%);
+    color: white;
+}
+
+.highcharts-background{
+    height:300px;
+}
+
+.m-r-xs{
+    margin-bottom: 5px;
+}

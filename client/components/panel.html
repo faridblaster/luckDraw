@@ -1,0 +1,39 @@
+<template name="Panel">
+
+  <div class="container login_area" align="center">
+
+    {{#if currentUser}}
+
+    <div class="row">
+      <div class="col-sm-12">
+
+        <div class="col-sm-6">
+          <div class="thumbnail">
+            <img class="height-10" src="/cfs/files/image/{{imageDetail.metadata.imageId}}">
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="caption text-left">
+            <h3>{{userInfo.name}}</h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-sm-12">
+
+        {{> highchartsHelper chartId="chart" chartWidth="100%" charHeight="100%" chartObject=topGenresChart}}
+
+      </div>
+
+    </div>
+
+    {{/if}}
+
+  </div>
+
+</template>

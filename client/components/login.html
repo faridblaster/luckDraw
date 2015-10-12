@@ -1,0 +1,93 @@
+<template name="Login">
+
+  {{> Nav}}
+
+  <section class="m-t-lg wrapper-md animated pulse login">
+    <div class="container aside-xl" align="center">
+      <section class="m-b-lg m-t-md login_area">
+
+        {{#if currentUser}}
+
+        <div class="row">
+          <div class="col-sm-12">
+
+            <div class="col-sm-6">
+              <div class="thumbnail">
+                {{#each images_file}}
+                <img class="height-10" src="{{this.url store='image_thumb'}}">
+                {{/each}}
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="caption text-left">
+                <h3>{{userInfo.name}}</h3>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {{else}}
+
+        <div class="list-group-item no-border">
+
+          <div class="row">
+
+            <div class="col-sm-12">
+
+              <button id="facebook-login" class="btn btn-primary btn-block"> Login with Facebook</button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <form role="form" method="post">
+          <div class="list-group">
+
+            <div class="list-group-item no-border">
+              <input id="username" type="text" placeholder="Username" class="form-control" tabindex="1">
+            </div>
+
+            <div class="list-group-item no-border">
+              <input id="password" type="password" placeholder="Password" class="form-control" tabindex="2">
+            </div>
+
+            <div class="list-group-item no-border">
+
+              <div class="row">
+
+                <div class="col-sm-12">
+
+                  <div class="col-sm-6 m-t-xs">
+                    <span xaction="login" class="btn btn-success btn-block" tabindex="3">Sign in</span>
+                  </div>
+
+                  <div class="col-sm-6 m-t-xs">
+                    <span xcreate="account" class="btn btn-default btn-block" tabindex="4">Create Account</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {{#if loginMessage}}
+          <p class="text-center text-danger m-t">
+            <small>{{loginMessage}}</small>
+          </p>
+          {{/if}}
+        </form>
+
+        {{/if}}
+
+      </section>
+    </div>
+  </section>
+
+</template>
